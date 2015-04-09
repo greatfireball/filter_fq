@@ -1,0 +1,3 @@
+language: perl
+
+script: perl -c filter_fq.pl
