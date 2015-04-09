@@ -1,0 +1,52 @@
+** Description
+
+This program can be used to filter Illumina reads
+
+I started writing the program because we need to filter a paired end data set which was quality filtered.
+Therefore one of the reads may fail the length filter, but the other might pass the test. This will result
+in non-synchronised fq files which is a lot of work to fix.
+
+To avoid this resyncronize job, both files are read at the same time and a complete block will be printed if
+both reads pass the test.
+
+** Installation
+
+#+BEGIN_EXAMPLE
+  git clone https://github.com/greatfireball/filter_fq
+#+END_EXAMPLE
+
+** Requirements
+- Perl installation
+- Perl Modules
+  - Getopt::Long
+
+** Usage
+#+BEGIN_EXAMPLE
+  filter_fq.pl \
+    --reads reads.fq \
+    --mates mates.fq \
+    --len 100 \
+    --max_reads 100000 \
+    > reads_exact_100bp.fq 2> mates_exact_100bp.fq
+#+END_EXAMPLE
+
+** Parameters
+
+| Parameter | Default value | Description |
+
+** Contact
+If you have any questions or encounter problems or potential bugs, don't
+hesitate to contact us. Either report [[https://github.com/greatfireball/filter_fq/issues][issues]] on github 
+or write an email to:
+ - Frank Förster - [[mailto:foersterfrank@gmx.de][foersterfrank@gmx.de]]
+
+#+TITLE: filter_fq manual
+#+AUTHOR: Frank Förster
+#+EMAIL: foersterfrank@gmx.de
+#+LANGUAGE: en
+#+OPTIONS: ^:nil date:nil H:2
+#+LaTeX_CLASS: scrartcl
+#+LaTeX_CLASS_OPTIONS: [a4paper,12pt,headings=small]
+#+LaTeX_HEADER: \setlength{\parindent}{0pt}
+#+LaTeX_HEADER: \setlength{\parskip}{1.5ex}
+#+LATEX_HEADER: \renewcommand{\familydefault}{\sfdefault}
