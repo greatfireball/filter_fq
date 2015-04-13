@@ -1,7 +1,7 @@
 ** Build & Coverage
 [[https://travis-ci.org/greatfireball/filter_fq/][https://travis-ci.org/greatfireball/filter_fq.svg]]
 
-[[https://coveralls.io/r/greatfireball/filter_fq][https://coveralls.io/repos/greatfireball/filter_fq/badge.svg]]
+[[https://coveralls.io/r/greatfireball/filter_fq][https://coveralls.io/repos/greatfireball/filter_fq/badge.svg?branch=master]]
 
 ** Description
 
